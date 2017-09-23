@@ -175,7 +175,7 @@
 
 		</div>
 
-		<!-- Modal -->
+		<!-- Modal to show results -->
 		<div id="resultsModal" class="modal">
 
 			<!-- Modal content-->
@@ -193,6 +193,22 @@
 			</div>
 			<div class="modal-footer">
 				<a href="#!" class="modal-action modal-close waves-effect btn-flat">Cool!</a>
+			</div>
+
+		</div>
+
+		<!-- Modal to request the form be filled out completely -->
+		<div id="incompleteModal" class="modal">
+				
+			<!-- Modal content-->
+			<div class="modal-content">
+				<h4><strong>Incomplete Form!</strong></h4>
+				<hr>
+				Sorry, my friend, by you need to fill out all the items in the form.
+				<hr>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class="modal-action modal-close waves-effect btn-flat">Try Again</a>
 			</div>
 
 		</div>
@@ -251,7 +267,7 @@
 			}
 			else
 			{
-				alert("Please fill out all fields before submitting!");
+				$('#incompleteModal').modal('open');
 			}
 			
 			return false;
