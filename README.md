@@ -22,7 +22,7 @@ When the user submits the questions, it does a POST to the API which then finds 
 
 The *home* page then displays a modal that displays the match's name and photo.  If the person matched has not entered a valid image, it loads a default image.
 
-This site uses the following pacakges for Node:
+This site uses the following pacakges for Node (be sure to ```npm install```):
 
 express  
 body-parser
