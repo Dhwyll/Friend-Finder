@@ -31,14 +31,14 @@
 					<div class="row">
 						<div class="input-field col s12">
 							<i class="material-icons prefix">account_circle</i>
-							<input class="form-control" id="name" type="text" required>
+							<input class="form-control" id="name" type="text" required="" aria-required="true">
 							<label for="name">Name (required)</label>
 						</div>
 					</div>
 					<div class="row">
 						<div class="input-field col s12">
 							<i class="material-icons prefix">camera</i>
-							<input class="form-control" id="photo" type="text" required>
+							<input class="form-control" id="photo" type="text" required="" aria-required="true">
 							<label for="photo">Link to Photo Image (required)</label>
 						</div>
 					</div>
@@ -186,7 +186,7 @@
 				<h4 id="matchName" class="center-align">Name</h4>
 				<div class="row">
 					<div class="col s12 center">
-						<img id="matchImg" src="https://www.miataturbo.net/attachments/insert-bs-here-4/74585d1366831822-random-pictures-thread-only-rule-post-here-more-entertain-me-cannot-unseen.jpg" height=300 alt="">
+						<img id="matchImg" src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-2-512.png" height=300 alt="" onerror="this.src = 'https://cdn0.iconfinder.com/data/icons/user-pictures/100/unknown_1-2-512.png'">
 					</div>
 				</div>
 				<hr>
@@ -226,12 +226,12 @@
 			function validateForm() {
 				var isValid = true;
 				$('.form-control').each(function() {
-					if ( $(this).val() === '' )
+					if (!$(this).val())
 						isValid = false;
 				});
 
 				$('.drop-select').each(function() {
-					if( $(this).val() === null )
+					if($(this).val() === null)
 						isValid = false;
 				});
 				return isValid;
