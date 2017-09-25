@@ -21,3 +21,15 @@ The *survey* page then asks for the user's name, a link to the user's photo, and
 When the user submits the questions, it does a POST to the API which then finds the person in the *friendsData* array that most closely matches.  This is done by summing all responses and finding the entry in the *friendsData* array that is closest to that sum (either positive or negative).  Upon finding the person in the array that matches, it returns that person's information in JSON format and pushes the user's information into the *friendsData* array for future matches.
 
 The *home* page then displays a modal that displays the match's name and photo.  If the person matched has not entered a valid image, it loads a default image.
+
+This site uses the following pacakges for Node (be sure to ```npm install```):
+
+express  
+body-parser
+
+This site uses the following packages for the front end:
+  
+JQuery  
+Materialize  
+Materialize Icons  
+Font Awesome Glyphicons
