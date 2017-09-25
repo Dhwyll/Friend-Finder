@@ -33,7 +33,6 @@ var friendsData = require("../data/friends");
 	app.post("/api/friends", function(req, res) {
 		// Note the code here. Our "server" will respond to requests and let users know the closest match.
 		// It will do this by calculating the closest match and sending back that person's information
-		console.log(req.body);
 		var scoreArray = [];		// This will hold the total score for each person in the friendsData array
 		var userScore = 0;			// This will hold the current submitter's total score
 		var diffArray = [];			// This will hold the difference in scores between each friendsData entry and the current submitter
